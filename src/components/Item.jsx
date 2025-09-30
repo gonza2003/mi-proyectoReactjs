@@ -6,7 +6,7 @@ const Item = ({ item }) => {
 
     return (
         <div className="card" style={{ width: '18rem' }}>
-            <img src={item.img} alt={item.nombre} style={{ width: "100%", height: "150px", objectFit: "cover" }} />
+            <img src={item.img} alt={item.nombre} style={{ width: "100%", height: "200px", objectFit: "cover" }} />
             <div className="card-body">
                 <h5 className="card-title">{item.nombre}</h5>
                 <p className="card-text">{item.descripcion}</p>
