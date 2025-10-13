@@ -1,6 +1,8 @@
 import NavBar from './components/NavBar.jsx'
 import ItemListContainer from './components/ItemListContainer.jsx'
 import ItemDetailContainer from './components/ItemDetailContainer.jsx'
+import Cart from './components/Cart.jsx'
+import Checkout from './components/Checkout.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartProvider } from './context/CartContext.jsx'
 
@@ -24,6 +26,8 @@ function App() {
         <Route path='/productos' element={<ItemListContainer mensaje="Estos son nuestros productos" />} />
         <Route path='/productos/:categoria' element={<ItemListContainer mensaje="Catálogo por categoría" />} />
         <Route path='/item/:id' element={<ItemDetailContainer />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/checkout' element={<Checkout />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </CartProvider>

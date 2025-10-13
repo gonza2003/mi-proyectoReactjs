@@ -2,6 +2,12 @@ import React, { useState } from "react";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
     const [count, setCount] = useState(initial);
+
+    // Si el stock cambia, resetea el contador
+    React.useEffect(() => {
+        setCount(initial);
+    }, [initial, stock]);
+
     return (
         <div className="d-flex align-items-center gap-2">
             <button
